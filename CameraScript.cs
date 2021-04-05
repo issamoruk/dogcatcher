@@ -22,7 +22,7 @@ public class CameraScript : MonoBehaviour
     void LateUpdate()
     {
         maincamera.fieldOfView = FOV;
-        if (movement.speedo != 0 && movement.score == 00)
+        if (movement.speedo != 0)
         {
             transform.position = player.position - offset;
         }  
@@ -30,34 +30,8 @@ public class CameraScript : MonoBehaviour
         {
             transform.position = doberman.position - offset2;        
         }
-        else if (movement.speedo == 0)
-        {
-            transform.position = stack.position - offset;
-        }
-        else if (movement.speedo != 0 && movement.score ==100)
-        {
-            transform.position = player.position - offset;
-        }
-        else if (movement.speedo != 0 && movement.score == 200)
-        {
-            transform.position = player.position - offset;
-        }
-        else if (movement.speedo != 0 && movement.score == 300)
-        {
-            transform.position = player.position - offset;
-        }
-        else if (movement.speedo != 0 && movement.score == 400)
-        {
-            transform.position = player.position - offset;
-        }
-        else if (movement.speedo != 0 && movement.score == 500)
-        {
-            transform.position = player.position - offset;
-        }
-        else if (movement.speedo != 0 && movement.score > 500)
-        {
-            transform.position = player.position - offset;
-        }
+      
+     
     }
     IEnumerator CameraCoroutine()
     {
